@@ -1,3 +1,6 @@
+- name: breaking_change
+  description:  A change that changes the API or breaks backward compatibility for users
+  color: D93F0B
 - name: bug
   description: Something isn't working
   color: d73a4a
