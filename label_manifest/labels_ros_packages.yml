@@ -22,9 +22,15 @@
 - name: invalid
   description: This doesn't seem right
   color: e4e669 
-- name: invalid
-  description: This doesn't seem right
-  color: e4e669 
+- name: question
+  description: Further information is requested
+  color: d876e3
+- name: research
+  description: Researching something new
+  color: 2b9ffb
+- name: ros_distro
+  description: Changes due to a ROS distro update or changing of a ROS distro
+  color: 193ee0
 - name: wontfix
   description: This will not be worked on
   color: ffffff   
