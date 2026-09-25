@@ -14,4 +14,4 @@ jobs:
               RbSCR/bno08x_rand
               RbSCR/bno08x_hardware_interface
               RbSCR/bno08x_sh2_libraries
-          token: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
