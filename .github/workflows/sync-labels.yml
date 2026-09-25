@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: micnncim/action-label-syncer@v1.3.0
         with:
-          manifest: label_manifest/labels_ros_repos.yml
+          manifest: ${{ GITHUB_REPOSITORY }}/label_manifest/labels_ros_repos.yml
           repository: |
               RbSCR/bno08x_rand
               RbSCR/bno08x_hardware_interface
