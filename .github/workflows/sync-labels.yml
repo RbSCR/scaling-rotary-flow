@@ -3,14 +3,20 @@ on:
   workflow_dispatch:
   
 jobs:
-  build:
+  labels:
+    name: Sync labels
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v2
-      - uses: micnncim/action-label-syncer@v1.3.0
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Run label sync
+        uses: srealmoreno/label-sync-action@v2.0.0
         with:
-          manifest: ${{ github.workspace }}/label_manifest/labels_ros_packages.yml
-          repository: |
+          config-file: ${{ github.workspace }}/label_manifest/labels_ros_packages.yml
+          clean-labels: false
+          repositories: |
               RbSCR/bno08x_rand
               RbSCR/bno08x_hardware_interface
               RbSCR/bno08x_sh2_libraries
