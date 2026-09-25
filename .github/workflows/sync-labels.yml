@@ -1,0 +1,17 @@
+name: Sync labels
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: micnncim/action-label-syncer@v1.3.0
+        with:
+          manifest: label_manifest/labels_ros_repos.yml
+          repository: |
+              RbSCR/bno08x_rand
+              RbSCR/bno08x_hardware_interface
+              RbSCR/bno08x_sh2_libraries
+          token: ${{ secrets.PERSONAL_TOKEN }}
